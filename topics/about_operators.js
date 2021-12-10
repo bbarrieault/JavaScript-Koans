@@ -2,7 +2,7 @@
 module("About Operators (topics/about_operators.js)");
 
 test("Assignment and Addition: What is the value of result?", function() {
-  // variables remember values for use later
+  // variables, such as `result`, remember values for use later
   var result;
 
   // single equals ' = ' is the assign operator.
@@ -16,9 +16,11 @@ test("Assignment and Addition: What is the value of result?", function() {
 });
 
 test("Assignment addition shorthand", function() {
-  // variables only "live" inside of the { curly braces } where they are defined
+  // variables only "live" inside of the { curly braces } where they are defined with 'var'
   // Each "var result" on this page is a brand new variable
   var result = 0;
+
+  // `result += 1;` is a shortcut for `result = result + 1;`
   result += 1;
   result += 2;
   result += 3;
@@ -26,7 +28,7 @@ test("Assignment addition shorthand", function() {
   expect( __ ).toEqual(result);
 });
 
-test("Subtraction", function() {
+test("Subtraction assignment shorthand", function() {
   var result;
   result = 5;
   result = result - 1;
@@ -35,7 +37,7 @@ test("Subtraction", function() {
   expect( __ ).toEqual(result);
 });
 
-test("Assignment subtraction shorthand", function() {
+test("other assignment shorthands", function() {
   var result = 5;
   result -= 1
   result += 2

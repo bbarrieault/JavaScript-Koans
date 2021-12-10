@@ -507,13 +507,16 @@ QUnit = {
 // We attach it to the QUnit object *after* we expose the public API,
 // otherwise `assert` will become a global variable in browsers (#341).
 assert = {
-
+	/**
+	 * This is some jest-style syntactic sugar, expect(x).toEqual(y)
+	 * It generally acts the same as ok() or equal() but is easier to read
+	 */
 	expect: function(actual) {
 		function equal(actual, expected){
-			QUnit.push( expected == actual, actual, expected, "", 4 )
+			QUnit.push( expected === actual, actual, expected, "", 4 )
 		};
 		function notEqual(actual, expected){
-			QUnit.push( expected != actual, actual, expected, "", 4 )
+			QUnit.push( expected !== actual, actual, expected, "", 4 )
 		};
 
 		return {
