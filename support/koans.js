@@ -1,5 +1,5 @@
 
-var __ = "incomplete";
+var __ = "blank";
 
 // ignore this. It simplifies determining array equality
 Array.prototype.equalTo = function(compareTo) {

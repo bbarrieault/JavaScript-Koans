@@ -1,47 +1,55 @@
 
 module("About Operators (topics/about_operators.js)");
 
-test("addition", function() {
+test("Assignment and Addition: What is the value of result?", function() {
+  // variables remember values for use later
+  var result;
+
+  // single equals ' = ' is the assign operator.
+  // it stores a value in a variable
+  result = 1;
+  result = result + 1;
+  result = result + 2;
+  result = result + 3;
+
+  expect( __ ).toEqual(result);
+});
+
+test("Assignment addition shorthand", function() {
+  // variables only "live" inside of the { curly braces } where they are defined
+  // Each "var result" on this page is a brand new variable
   var result = 0;
-  //starting i at 0, add i to result and increment i by 1 until i is equal to 5
-  for (var i = 0; i <= 5; i++) {
-    result = result + i;
-  }
-  equal(__, result, "What is the value of result?");
+  result += 1;
+  result += 2;
+  result += 3;
+
+  expect( __ ).toEqual(result);
 });
 
-test("assignment addition", function() {
-  var result = 0;
-  for (var i = 0; i <=5; i++) {
-    //the code below is just like saying result = result + i; but is more concise
-    result += i;
-  }
-  equal(__, result, "What is the value of result?");
+test("Subtraction", function() {
+  var result;
+  result = 5;
+  result = result - 1;
+  result -= 2;
+
+  expect( __ ).toEqual(result);
 });
 
-test("subtraction", function() {
+test("Assignment subtraction shorthand", function() {
   var result = 5;
-  for (var i = 0; i <= 2; i++) {
-    result = result - i;
-  }
-  equal(__, result, "What is the value of result?");
+  result -= 1
+  result += 2
+  result *= 3
+  result /= 2
+
+  expect( __ ).toEqual(result);
 });
 
-test("assignment subtraction", function() {
-  var result = 5;
-  for (var i = 0; i <= 2; i++) {
-    result -= i;
-  }
-  equal(__, result, "What is the value of result?");
-});
-
-//Assignment operators are available for multiplication and division as well
-//let's do one more, the modulo operator, used for showing division remainder
-
-test("modulus", function() {
+test("Modulo operator", function() {
   var result = 10;
   var x = 5;
-  //again this is exactly the same as result = result % x
-  result %= x;
-  equal(__, result, "What is the value of result?");
+  //the modulo operator returns the division remainder
+  result = result % x;
+
+  expect( __ ).toEqual(result);
 });

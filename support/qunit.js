@@ -507,6 +507,31 @@ QUnit = {
 // We attach it to the QUnit object *after* we expose the public API,
 // otherwise `assert` will become a global variable in browsers (#341).
 assert = {
+
+	expect: function(actual) {
+		function equal(actual, expected){
+			QUnit.push( expected == actual, actual, expected, "", 4 )
+		};
+		function notEqual(actual, expected){
+			QUnit.push( expected != actual, actual, expected, "", 4 )
+		};
+
+		return {
+			toEqual: function(expected) {
+				equal(actual, expected, "");
+			},
+			toNotEqual: function(expected) {
+				notEqual(actual, expected, "");
+			},
+			toBeTruthy() {
+				equal(!!actual, true, "");
+			},
+			toBeFalsey() {
+				equal(!!actual, false, "");
+			},
+		}
+	},
+
 	/**
 	 * Asserts rough true-ish result.
 	 * @name ok
@@ -912,7 +937,7 @@ extend( QUnit, {
 		return undefined;
 	},
 
-	push: function( result, actual, expected, message ) {
+	push: function( result, actual, expected, message, stackOffset = 3 ) {
 		if ( !config.current ) {
 			throw new Error( "assertion outside test context, was " + sourceFromStacktrace() );
 		}
@@ -941,7 +966,7 @@ extend( QUnit, {
 				output += "<tr class='test-diff'><th>Diff: </th><td><pre>" + QUnit.diff( expected, actual ) + "</pre></td></tr>";
 			}
 
-			source = sourceFromStacktrace();
+			source = sourceFromStacktrace(stackOffset);
 
 			if ( source ) {
 				details.source = source;
