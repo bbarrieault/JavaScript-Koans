@@ -1,22 +1,83 @@
 
 module("About Truthyness (topics/about_truthyness.js)");
 
+// In JavaScript, every value is either true-like, or false-like
+test("truthyness", function() {
+    var test = "1";
+
+    // 'true' is truthy, unsurprisingly
+    if( true ) {
+        test = "2";
+    }
+
+    expect( __ ).toEqual(test);
+});
+
 test("truthyness of positive numbers", function() {
-    var oneIsTruthy = 1 ? true : false;
-    equal(__, oneIsTruthy, 'is one truthy?');
+    var test = "A";
+
+    // since every value is either truthy or falsey, you can use any value as a condition
+    if( 1 ) {
+        test = "B";
+    }
+
+    expect( __ ).toEqual(test);
+});
+
+test("truthyness conversion", function() {
+    var test = 99;
+
+    // not ( ! ) inverts the true/false value
+    expect( __ ).toEqual( !test );
+
+    // inverting the truthy/falsey value TWICE is the same as asking "is this truthy?"
+    expect( __ ).toEqual( !!test );
 });
 
 test("truthyness of negative numbers", function() {
     var negativeOneIsTruthy = -1 ? true : false;
-    equal(__, negativeOneIsTruthy, 'is -1 truthy?');
+
+    expect( __ ).toEqual(negativeOneIsTruthy);
 });
 
 test("truthyness of zero", function() {
     var zeroIsTruthy = 0 ? true : false;
-    equal(__, zeroIsTruthy, 'is 0 truthy?');
+
+    expect( __ ).toEqual(zeroIsTruthy);
+});
+
+test("truthyness of strings", function() {
+    // strings can be empty
+    var stringIsTruthy = "" ? true : false;
+
+    expect( __ ).toEqual(stringIsTruthy);
+
+    stringIsTruthy = "test string!" ? true : false;
+
+    expect( __ ).toEqual(stringIsTruthy);
 });
 
 test("truthyness of null", function() {
-    var nullIsTruthy = null ? true : false;
-    equal(__, nullIsTruthy, 'is null truthy?');
+    // null is a special value
+    // It usually is used to indicate data is missing
+    var value = null;
+    var test = 0;
+
+    if ( value ) {
+        test = 1;
+    }
+
+    expect( __ ).toEqual(test);
+});
+
+test("truthyness of undefined", function() {
+    // undefined is the 'default' value of variables, if you don't specify a value
+    var unsetValue = undefined;
+    var test = false;
+
+    if ( unsetValue ) {
+        test = true;
+    }
+
+    expect( __ ).toEqual(test);
 });

@@ -1,45 +1,52 @@
 module("About Control Structures (topics/about_control_structures.js)");
 
-test("if", function() {
+test("if statements: what is the value of the variable?", function() {
 	var isPositive = false;
+
+	// 'if' statements only execute the code inside the { curly braces } when the condition inside its ( parens ) is true
+	// Otherwise it skips the whole block { }
 	if (2 > 0) {
 		isPositive = true;
 	}
-	equal(__, isPositive,  'what is the value of isPositive?');
+
+	expect( __ ).toEqual(isPositive);
 });
 
-test("for", function() {
-	var counter = 10;
-	for (var i = 1; i <= 3; i++) {
-		counter = counter + i;
+test("if statements continued", function() {
+	var test = 0;
+
+	// 'else' statements are only run when the 'if' statement is false
+	if( test > 10) {
+		test = 5;
+	} else {
+		test = 2;
 	}
-	equal(__, counter, 'what is the value of counter?');
+
+	expect( __ ).toEqual(test);
 });
 
-test("for in", function() {
-	// this syntax will be explained in about objects
-	var person = {
-		name: "Amory Blaine",
-		age: 102
-	};
-	var result = "";
-	// for in enumerates the property names of an object
-	for (var property_name in person) {
-  		result = result + property_name;
-	}
-	equal(__, result, 'what is the value of result?');
-});
+test("ternary operator: inline ifs", function() {
+	var fruit;
+	// if-else statements can be written shorthand. the notation is <condition> ? <true fork> : <false/else fork>
+	fruit = ( true ? "apple" : "orange" );
 
-test("ternary operator", function() {
-	var fruit = true ? "apple" : "orange";
-	equal(__, fruit, 'what is the value of fruit?');
+	// What is the value of fruit?
+	expect( __ ).toEqual(fruit);
 
-	fruit = false ? "apple" : "orange";
-	equal(__, fruit, 'now what is the value of fruit?');
+	fruit = false ? "pear" : "grape";
+
+	// What is the value of fruit now?
+	expect( __ ).toEqual(fruit);
+
+	// you can have any calculated condition as the first part of a ternary statement
+	fruit = 1 === 2 ? "tomato" : "cucumber";
+	expect( __ ).toEqual(fruit);
 });
 
 test("switch", function() {
 	var result = 0;
+
+	//switch statements are the same as chaining lots of ` if {} else if {} else if {} ` together
 	switch (2) {
 		case 1:
 			result = 1;
@@ -48,7 +55,8 @@ test("switch", function() {
 			result = 2;
 			break;
 	}
-	equal(__, result, 'what is the value of result?');
+
+	expect( __ ).toEqual(result);
 });
 
 test("switch default case", function() {
@@ -64,10 +72,5 @@ test("switch default case", function() {
             result = "Merry";
             break;
     }
-    equal(__, result, 'what is the value of result?');
-});
-
-test("null coalescing", function() {
-    var result = null || "a value";
-    equal(__, result, 'what is the value of result?');
+	expect( __ ).toEqual(result);
 });
