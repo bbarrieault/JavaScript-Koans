@@ -1,7 +1,7 @@
 
 module("About Boolean Logic (topics/about_boolean_logic.js)");
 
-test("And operator", function() {
+test("And operator &&", function() {
    var test1 = true;
    var test2 = "yup";
    var result = false;
@@ -14,7 +14,7 @@ test("And operator", function() {
    expect( __ ).toEqual(result)
 });
 
-test("Or operator", function() {
+test("Or operator ||", function() {
    var test1 = false;
    var test2 = "maybe";
    var result = false;
@@ -29,7 +29,7 @@ test("Or operator", function() {
 
 test("falsey coalescing", function() {
     // You can use the OR operator ' || ' to handle missing data
-    // If the first value given to ' || ' is falsey, it skips it and uses the second value
+    // If the first value given to ' || ' is falsey, it skips over it and returns the second value
     var result = null || "a value";
 
     expect( __ ).toEqual(result);
