@@ -55,3 +55,12 @@ test("Modulo operator", function() {
 
   expect( __ ).toEqual(result);
 });
+
+test("Writing variable assignments", function() {
+  var someValue = 10;
+
+  // write an assignment&update statement by filling in the blanks below to make the expect() pass
+  __ += __;
+
+  expect(someValue).toEqual(25);
+});

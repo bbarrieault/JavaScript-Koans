@@ -33,7 +33,8 @@ test("for loops", function() {
     var counter = 0;
 
     // for loops are the same as while loops, except they have their counter variable and halt condition all in one line
-    // the syntax is ' for ( <counter variable> ; <halting condition> ; <increment counter> )
+    // the syntax is ' for ( <counter variable> ; <halting condition> ; <incrementer> )
+    // Almost all for loops go from 0 to a specified number, going up one at a time
     for (var i = 1; i <= 3; i++) {
 
         counter = counter + i;

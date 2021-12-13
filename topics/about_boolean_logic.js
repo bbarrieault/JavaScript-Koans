@@ -27,7 +27,7 @@ test("Or operator ||", function() {
    expect( __ ).toEqual(result)
 });
 
-test("falsey coalescing", function() {
+test("Or operator for default values", function() {
     // You can use the OR operator ' || ' to handle missing data
     // If the first value given to ' || ' is falsey, it skips over it and returns the second value
     var result = null || "a value";

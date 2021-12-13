@@ -12,6 +12,7 @@ test('what equals 1+1, to satisfy the expect assertion?', function() {
 
     // expect().toEqual() is a unit test, which will fail (and halt future tests)
     // if the two inputs are not equal
+    // There are a lot of possible answers that make this test pass, don't overthink it
     expect( __ ).toEqual( 1 + 1);
 });
 

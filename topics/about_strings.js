@@ -1,34 +1,36 @@
 
 module("About Strings (topics/about_strings.js)");
 
-test("delimiters", function() {
+test("Quote types in strings", function() {
     var singleQuotedString = 'apple';
     var doubleQuotedString = "apple";
-    equal(__, singleQuotedString === doubleQuotedString, 'are the two strings equal?');
+
+    expect( __ ).toEqual(singleQuotedString === doubleQuotedString);
 });
 
-test("concatenation", function() {
+test("String concatenation", function() {
     var fruit = "apple";
     var dish = "pie";
-    equal(__, fruit + " " + dish, 'what is the value of fruit + " " + dish?');
-});
 
-test("character Type", function() {
-    var characterType = typeof("Amory".charAt(1)); // typeof will be explained in about reflection
-    equal(__, characterType, 'Javascript has no character type');
-});
-
-test("escape character", function() {
-    var stringWithAnEscapedCharacter  = "\u0041pple";
-    equal(__, stringWithAnEscapedCharacter, 'what  is the value of stringWithAnEscapedCharacter?');
+    expect( __ ).toEqual(fruit + " " + dish);
 });
 
 test("string.length", function() {
     var fruit = "apple";
-    equal(__, fruit.length, 'what is the value of fruit.length?');
+
+    expect( __ ).toEqual(fruit.length);
 });
 
-test("slice", function() {
+test("String methods", function() {
+    // All objects in JavaScript will come with functions to access/edit themselves
+    // "Google everything" is the secret to development
+    // You can also use the browser dev tools console to experiment with code
+    //     (right-click on the web page, select "inspect", then open the "console" tab)
     var fruit = "apple pie";
-    equal(__, fruit.slice(0,5), 'what is the value of fruit.slice(0,5)?');
+
+    // What does slice() do on a string such as the variable 'fruit' ?
+    // what inputs do you need to give to slice() to make it give the expected result below?
+    var result = fruit.slice(0, __ );
+
+    expect( result ).toEqual("apple");
 });
