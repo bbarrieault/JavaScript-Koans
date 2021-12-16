@@ -1,4 +1,4 @@
-module("About Loops (topics/about_loops.js)");
+module("About Loops (topics/09_about_loops.js)");
 
 test("Time to do some loops!", function() {
     var count = 0;

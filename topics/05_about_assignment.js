@@ -1,5 +1,5 @@
 
-module("About Assignment (topics/about_assignment.js)");
+module("About Assignment (topics/05_about_assignment.js)");
 var fileScopeVariable = "you can declare variables almost anywhere";
 
 test("Local variables", function() {

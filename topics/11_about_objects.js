@@ -1,5 +1,5 @@
 
-module("About Objects (topics/about_objects.js)");
+module("About Objects (topics/11_about_objects.js)");
 
 test("Intro to objects", function() {
     // you can use curly braces like this to define a variable as an 'Object'

@@ -1,5 +1,5 @@
 
-module("About Truthyness (topics/about_truthyness.js)");
+module("About Truthyness (topics/08_about_truthyness.js)");
 
 // In JavaScript, every value is either true-like, or false-like
 test("truthyness", function() {

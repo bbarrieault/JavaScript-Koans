@@ -1,5 +1,5 @@
 
-module("About Strings (topics/about_strings.js)");
+module("About Strings (topics/04_about_strings.js)");
 
 test("Quote types in strings", function() {
     var singleQuotedString = 'apple';

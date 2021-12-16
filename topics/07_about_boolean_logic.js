@@ -1,5 +1,5 @@
 
-module("About Boolean Logic (topics/about_boolean_logic.js)");
+module("About Boolean Logic (topics/07_about_boolean_logic.js)");
 
 test("And operator &&", function() {
    var test1 = true;

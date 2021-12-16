@@ -1,5 +1,5 @@
 
-module("About Operators (topics/about_operators.js)");
+module("About Operators (topics/02_about_operators.js)");
 
 test("Assignment and Addition: What is the value of result?", function() {
   // variables, such as `result`, remember values for use later
@@ -33,16 +33,6 @@ test("Subtraction assignment shorthand", function() {
   result = 5;
   result = result - 1;
   result -= 2;
-
-  expect( __ ).toEqual(result);
-});
-
-test("other assignment shorthands", function() {
-  var result = 5;
-  result -= 1
-  result += 2
-  result *= 3
-  result /= 2
 
   expect( __ ).toEqual(result);
 });

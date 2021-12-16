@@ -1,4 +1,4 @@
-module("About Control Structures (topics/about_control_structures.js)");
+module("About Control Structures (topics/06_about_control_structures.js)");
 
 test("if statements: what is the value of the variable?", function() {
 	var isPositive = false;

@@ -1,4 +1,4 @@
-module("About Arrays (topics/about_arrays.js)");
+module("About Arrays (topics/12_about_arrays.js)");
 
 test("arrays: lists of values", function () {
     // Arrays are a comma-separated list of values and/or variables

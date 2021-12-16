@@ -1,5 +1,5 @@
 
-module("About Equality (topics/about_equality.js)");
+module("About Equality (topics/03_about_equality.js)");
 
 test("numeric addition", function() {
     expect(3 + __ ).toEqual(7);

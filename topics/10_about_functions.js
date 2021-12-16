@@ -1,4 +1,4 @@
-module("About Functions (topics/about_functions.js)");
+module("About Functions (topics/10_about_functions.js)");
 
 test("defining functions directly", function() {
     var result = "a";

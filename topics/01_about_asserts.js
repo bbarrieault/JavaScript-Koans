@@ -1,5 +1,5 @@
 
-module("About Asserts (topics/about_asserts.js)");
+module("About Asserts (topics/01_about_asserts.js)");
 
 // This first file is to learn about the basics of the unit test style used in this project
 // Replace the blank __ with a value to make the tests pass
