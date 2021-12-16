@@ -14,12 +14,6 @@ test("numeric INequality", function() {
     expect(3 + __ !== 7).toEqual(true);
 });
 
-// "literal" means a value that is typed out in the code, instead of saved in a variable
-test("string literals", function() {
-    equal(__, "frankenstein", "quote types are interchangable, but must match at both ends.");
-    equal(__, 'frankenstein', "quote types can use both single and double quotes.");
-});
-
 // Tests can sometimes have more than one assertion. They all must pass for the test to pass.
 // If one assertion is failing, it will correspond to the line number from the error message
 test("string concatenation", function() {

@@ -43,5 +43,6 @@ test("writing variables", function() {
     expect(myVariable).toEqual(5);
     expect(myOtherVariable).toEqual(3.14);
 
-
+    // did you properly declare your variables?
+    expect(window.myVariable).toEqual(undefined);
 });

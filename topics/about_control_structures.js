@@ -72,7 +72,7 @@ test("writing if statements", function() {
 	// Otherwise, you can leave the number as-is.
 
 	// This line of code gets a random number between -99 and 1, and assigns it to valueToCheck.
-	// Don't worry about the Math library for now, this is just so the test does different things sometimes.
+	// Don't worry about the Math library for now, this is just so the test gives different values when run.
 	const valueToCheck = Math.random() * 100 - 99;
 
 	// Write an if statement here, using the notation from previous tests.
