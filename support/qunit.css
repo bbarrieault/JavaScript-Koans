@@ -60,7 +60,8 @@
 }
 
 #qunit-banner {
-	height: 5px;
+	min-height: 5px;
+	text-align: center;
 }
 
 #qunit-testrunner-toolbar {
@@ -191,7 +192,7 @@
 #qunit-tests .pass .test-actual,
 #qunit-tests .pass .test-expected           { color: #999999; }
 
-#qunit-banner.qunit-pass                    { background-color: #C6E746; }
+#qunit-banner.qunit-pas, .banner-classname  { background-color: #528CE0; }
 
 /*** Failing Styles */
 

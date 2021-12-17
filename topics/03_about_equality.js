@@ -11,7 +11,7 @@ test("numeric equality", function() {
 
 test("numeric INequality", function() {
     // the exclamation point ! means 'not', it inverts the true/false value
-    expect(3 + __ !== 7).toEqual(true);
+    expect(3 + 5 !== 7).toEqual( __ );
 });
 
 // Tests can sometimes have more than one assertion. They all must pass for the test to pass.

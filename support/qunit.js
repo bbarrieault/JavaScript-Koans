@@ -1308,7 +1308,7 @@ function done() {
 		].join( "" );
 
 	if ( banner ) {
-		banner.className = ( config.stats.bad ? "qunit-fail" : "qunit-pass" );
+		banner.className = "banner-classname";
 	}
 
 	if ( tests ) {
