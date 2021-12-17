@@ -3,7 +3,7 @@ module("About Truthyness (topics/08_about_truthyness.js)");
 
 // In JavaScript, every value is either true-like, or false-like
 test("truthyness", function() {
-    var test = "1";
+    let test = "1";
 
     // 'true' is truthy, unsurprisingly
     if( true ) {
@@ -14,7 +14,7 @@ test("truthyness", function() {
 });
 
 test("truthyness of positive numbers", function() {
-    var test = "A";
+    let test = "A";
 
     // since every value is either truthy or falsey, you can use any value as a condition
     if( 1 ) {
@@ -25,7 +25,7 @@ test("truthyness of positive numbers", function() {
 });
 
 test("truthyness conversion", function() {
-    var test = 99;
+    const test = 99;
 
     // not ( ! ) inverts the true/false value
     expect( __ ).toEqual( !test );
@@ -35,20 +35,20 @@ test("truthyness conversion", function() {
 });
 
 test("truthyness of negative numbers", function() {
-    var negativeOneIsTruthy = -1 ? true : false;
+    const negativeOneIsTruthy = -1 ? true : false;
 
     expect( __ ).toEqual(negativeOneIsTruthy);
 });
 
 test("truthyness of zero", function() {
-    var zeroIsTruthy = 0 ? true : false;
+    const zeroIsTruthy = 0 ? true : false;
 
     expect( __ ).toEqual(zeroIsTruthy);
 });
 
 test("truthyness of strings", function() {
     // strings can be empty
-    var stringIsTruthy = "" ? true : false;
+    let stringIsTruthy = "" ? true : false;
 
     expect( __ ).toEqual(stringIsTruthy);
 
@@ -60,8 +60,8 @@ test("truthyness of strings", function() {
 test("truthyness of null", function() {
     // null is a special value
     // It usually is used to indicate data is missing
-    var value = null;
-    var test = 0;
+    const value = null;
+    let test = 0;
 
     if ( value ) {
         test = 1;
@@ -72,8 +72,8 @@ test("truthyness of null", function() {
 
 test("truthyness of undefined", function() {
     // undefined is the 'default' value of variables, if you don't specify a value
-    var unsetValue = undefined;
-    var test = false;
+    const unsetValue = undefined;
+    let test = false;
 
     if ( unsetValue ) {
         test = true;

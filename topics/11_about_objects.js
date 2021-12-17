@@ -4,7 +4,7 @@ module("About Objects (topics/11_about_objects.js)");
 test("Intro to objects", function() {
     // you can use curly braces like this to define a variable as an 'Object'
     // Objects are containers that can hold many values
-    var object = {};
+    let object = {};
     object.ID = "test";
     object.favorite_color = "blue";
 
@@ -15,7 +15,7 @@ test("Intro to objects", function() {
 test("Object literal notation", function() {
     // You can specify properties and values of an object using this notation
     // when you first declare it
-    var person = {
+    let person = {
         name: "Amory Blaine",
         favorite_color: __
     };
@@ -28,12 +28,12 @@ test("Object literal notation", function() {
 });
 
 test("Dynamic object properties", function() {
-    var year = 2012;
-    var getCurrentSpeed = function() {
+    const year = 2012;
+    const getCurrentSpeed = function() {
         return 55;
     }
 
-    var car = {
+    const car = {
         name: "Chevy Malibu",
         modelYear: year, // you can always use variables instead of literals in JavaScript
         speed: getCurrentSpeed // you can even add functions as properties of an object
@@ -44,4 +44,15 @@ test("Dynamic object properties", function() {
 
     // Hint: use parentheses() after a function name to run its code in curly braces
     expect( car.__ ).toEqual(55);
+});
+
+test("Object scope and the 'this' keyword", function () {
+    // In object methods, you can access the object's properties by using `this` as the object name
+    const person = {
+        name: 'bob',
+        intro: function () {
+            return "Hello, my name is " + this.__;
+        }
+    }
+    expect( person.intro() ).toEqual("Hello, my name is bob")
 });

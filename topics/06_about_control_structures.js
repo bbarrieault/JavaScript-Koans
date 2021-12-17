@@ -1,7 +1,7 @@
 module("About Control Structures (topics/06_about_control_structures.js)");
 
 test("if statements: what is the value of the variable?", function() {
-	var isPositive = false;
+	let isPositive = false;
 
 	// 'if' statements only execute the code inside the { curly braces } when
 	// the condition inside its ( parens ) is true
@@ -14,7 +14,7 @@ test("if statements: what is the value of the variable?", function() {
 });
 
 test("if statements continued", function() {
-	var test = 0;
+	let test = 0;
 
 	// 'else' statements are only run when the 'if' statement is false
 	if( test > 10) {
@@ -27,7 +27,7 @@ test("if statements continued", function() {
 });
 
 test("ternary operator: inline ifs", function() {
-	var fruit;
+	let fruit;
 	// if-else statements can be written shorthand. the notation is <condition> ? <true fork> : <false/else fork>
 	// Parentheses can be used to specify order-of-operations
 	fruit = ( true ? "apple" : "orange" );
@@ -46,8 +46,8 @@ test("ternary operator: inline ifs", function() {
 });
 
 test("switch", function() {
-	var result = 0;
-	var value = 2;
+	let result = 0;
+	const value = 2;
 
 	//switch statements are the same as chaining lots of ` if {} else if {} else if {} ` together
 	// The value inside the switch() parens is the condition to check

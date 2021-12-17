@@ -9,6 +9,21 @@ test("Local variables", function() {
     expect(temp).toEqual(1);
 });
 
+test("Declaring variables", function() {
+    // The first time you use a variable, you 'declare' it using a keyword like 'var'
+    // 'let' behaves very much like 'var', but is better constrained to where you defined it, and is considered cleaner
+    // 'const' indicates the variable is constant, and will not be changed later
+    var variable = 5;
+    const constant = __;
+    let changeableValue = 0;
+
+    changeableValue += 10;
+
+    expect(constant).toEqual(1);
+    expect(changeableValue).toEqual( __ );
+    expect( __ ).toEqual( 5 );
+});
+
 test("File scope variables", function() {
     // Where does the value of fileScopeVariable come from?
     expect("__").toEqual(fileScopeVariable);

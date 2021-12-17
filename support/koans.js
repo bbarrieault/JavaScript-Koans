@@ -51,7 +51,7 @@ Array.prototype.equalTo = function(compareTo) {
 		"Let the programmers be many and the managers few -- then all will be productive.",
 		"You can demonstrate a program for a corporate executive, but you can't make him computer literate.",
 		"Without the wind, the grass does not move. Without software hardware is useless.",
-		'Apprentice programmer: "When will I achive enlightenment?" Master programmer: "When your program runs."',
+		'Apprentice programmer: "When will I achieve enlightenment?" Master programmer: "When your program runs."',
 
 		// and some motivation from Douglas Hofstadter's opus "Gödel, Escher, Bach"
 		"Sometimes it seems as though each new step towards AI, rather than producing something which everyone agrees is real intelligence, merely reveals what real intelligence is not.",
